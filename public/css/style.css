@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+table td {
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    color: green;
+}
+
+table td.down {
+    color: red;
+}
+
+table td:after {
+    content: attr(data-number);
+    display: inline-block;
+    font: normal 12px/1 Sans-Serif;
+    width: 25px;
+    text-align: center;
+}
+
+table td:before {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px 4px 5px 4px;
+    border-color: transparent transparent green transparent;
+    margin-right: 15px;
+}
+
+table td.down:before {
+    border-width: 5px 4px 0 4px;
+    border-color: red transparent transparent transparent;
+}
+
+table tr{
+    text-align: center;
+}
+
